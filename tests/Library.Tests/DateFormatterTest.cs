@@ -20,9 +20,9 @@ public class DateFormatterTests
     [Test]
     public void IncorrectFormatTest()
     {
-        string testDate2 = "2004.12.20";
+        string testDate2 = "20/12";
         string result2 = DateFormatter.ChangeFormat(testDate2);
-        Assert.AreEqual("2004-12-20", result2);
+        Assert.AreEqual("Formato incorrecto", result2);
     }
 
     [Test]
@@ -30,7 +30,6 @@ public class DateFormatterTests
     {
         string testDate3 = "";
         string result3 = DateFormatter.ChangeFormat(testDate3);
-        Assert.AreEqual("--", result3);
+        Assert.AreEqual("Formato incorrecto", result3);
     }
-
 }
